@@ -13,6 +13,10 @@
 		176E1CDA1A8E246900C3E4FD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 176E1CD91A8E246900C3E4FD /* Images.xcassets */; };
 		176E1CDD1A8E246900C3E4FD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 176E1CDB1A8E246900C3E4FD /* LaunchScreen.xib */; };
 		176E1CE91A8E246900C3E4FD /* GuardiansWorldButtonPrototypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E1CE81A8E246900C3E4FD /* GuardiansWorldButtonPrototypeTests.swift */; };
+		176E1CF31A8E414900C3E4FD /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E1CF21A8E414900C3E4FD /* MenuTableViewController.swift */; };
+		176E1CF51A8E458100C3E4FD /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E1CF41A8E458100C3E4FD /* MenuItemCell.swift */; };
+		176E1CF91A8E4E7B00C3E4FD /* MenuItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 176E1CF81A8E4E7B00C3E4FD /* MenuItemModel.swift */; };
+		17B3FE881A8E6D95007AE5D0 /* ks1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17B3FE871A8E6D95007AE5D0 /* ks1.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		176E1CE21A8E246900C3E4FD /* GuardiansWorldButtonPrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GuardiansWorldButtonPrototypeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		176E1CE71A8E246900C3E4FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		176E1CE81A8E246900C3E4FD /* GuardiansWorldButtonPrototypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuardiansWorldButtonPrototypeTests.swift; sourceTree = "<group>"; };
+		176E1CF21A8E414900C3E4FD /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		176E1CF41A8E458100C3E4FD /* MenuItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		176E1CF81A8E4E7B00C3E4FD /* MenuItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItemModel.swift; sourceTree = "<group>"; };
+		17B3FE871A8E6D95007AE5D0 /* ks1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ks1.jpg; path = ../../../Desktop/ks1.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +91,9 @@
 				176E1CD91A8E246900C3E4FD /* Images.xcassets */,
 				176E1CDB1A8E246900C3E4FD /* LaunchScreen.xib */,
 				176E1CD01A8E246900C3E4FD /* Supporting Files */,
+				176E1CF21A8E414900C3E4FD /* MenuTableViewController.swift */,
+				176E1CF41A8E458100C3E4FD /* MenuItemCell.swift */,
+				176E1CF81A8E4E7B00C3E4FD /* MenuItemModel.swift */,
 			);
 			path = GuardiansWorldButtonPrototype;
 			sourceTree = "<group>";
@@ -90,6 +101,7 @@
 		176E1CD01A8E246900C3E4FD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				17B3FE871A8E6D95007AE5D0 /* ks1.jpg */,
 				176E1CD11A8E246900C3E4FD /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -193,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				176E1CD81A8E246900C3E4FD /* Main.storyboard in Resources */,
+				17B3FE881A8E6D95007AE5D0 /* ks1.jpg in Resources */,
 				176E1CDD1A8E246900C3E4FD /* LaunchScreen.xib in Resources */,
 				176E1CDA1A8E246900C3E4FD /* Images.xcassets in Resources */,
 			);
@@ -214,6 +227,9 @@
 			files = (
 				176E1CD51A8E246900C3E4FD /* ViewController.swift in Sources */,
 				176E1CD31A8E246900C3E4FD /* AppDelegate.swift in Sources */,
+				176E1CF51A8E458100C3E4FD /* MenuItemCell.swift in Sources */,
+				176E1CF31A8E414900C3E4FD /* MenuTableViewController.swift in Sources */,
+				176E1CF91A8E4E7B00C3E4FD /* MenuItemModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,6 +423,7 @@
 				176E1CEE1A8E246900C3E4FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		176E1CEF1A8E246900C3E4FD /* Build configuration list for PBXNativeTarget "GuardiansWorldButtonPrototypeTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +432,7 @@
 				176E1CF11A8E246900C3E4FD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
