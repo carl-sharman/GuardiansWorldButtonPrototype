@@ -7,11 +7,14 @@
 //
 
 import Foundation
+import UIKit
 
 class MenuItemModel {
     var title: String = ""
+    var image: UIImage? = nil
     
-    init(title: String) {
+    init(title: String, image: UIImage) {
         self.title = title
+        self.image = image
     }
 }

@@ -1,16 +1,16 @@
 //
-//  MenuTableViewController.swift
+//  TopicTableTableViewController.swift
 //  GuardiansWorldButtonPrototype
 //
-//  Created by Carl Sharman Work on 13/02/2015.
+//  Created by Carl Sharman on 16/02/2015.
 //  Copyright (c) 2015 United Learning. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+class TopicTableTableViewController: UITableViewController {
 
-    var menuItems: [MenuItemModel] = []
+    var topics: [TopicModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,17 +21,18 @@ class MenuTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        self.menuItems.append(MenuItemModel(title: "Year 1", image: UIImage(named: "one.png")!))
-        self.menuItems.append(MenuItemModel(title: "Year 2", image: UIImage(named: "two.png")!))
-        self.menuItems.append(MenuItemModel(title: "Year 3", image: UIImage(named: "three.png")!))
-        self.menuItems.append(MenuItemModel(title: "Year 4", image: UIImage(named: "four.png")!))
-        self.menuItems.append(MenuItemModel(title: "Year 5", image: UIImage(named: "five.png")!))
-        self.menuItems.append(MenuItemModel(title: "Year 6", image: UIImage(named: "six.png")!))
-//        self.menuItems.append(MenuItemModel(title: "Year 7", image: UIImage(named: "seven.png")!))
-//        self.menuItems.append(MenuItemModel(title: "Year 8", image: UIImage(named: "eight.png")!))
-//        self.menuItems.append(MenuItemModel(title: "Year 9", image: UIImage(named: "nine.png")!))
-	
-        
+//        self.topics.append(TopicModel(id: 1, title: "Number and place value", image: UIImage(named: "NumberAndPlaceValue")!, hasSubTopics: false))
+//        self.topics.append(TopicModel(id: 2, title: "+ and -", image: UIImage(named: "PlusAndMinus")!, hasSubTopics: false))
+//        self.topics.append(TopicModel(id: 3, title: "x and /", image: UIImage(named: "TimesAndDivision")!, hasSubTopics: false))
+//        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "Fractions")!, hasSubTopics: false))
+//        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "Measurement")!, hasSubTopics: false))
+//        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "Geometry")!, hasSubTopics: true))
+        self.topics.append(TopicModel(id: 1, title: "Number and place value", image: UIImage(named: "eight.png")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 2, title: "+ and -", image: UIImage(named: "eight.png")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 3, title: "x and /", image: UIImage(named: "eight.png")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "eight.png")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "eight.png")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "eight.png")!, hasSubTopics: true))
     }
 
     override func didReceiveMemoryWarning() {
@@ -42,40 +43,42 @@ class MenuTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete method implementation.
         // Return the number of rows in the section.
-        return self.menuItems.count + 1
+        return self.topics.count + 1
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell: MenuItemCell = tableView.dequeueReusableCellWithIdentifier("menuItemCell", forIndexPath: indexPath) as MenuItemCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("topicCell", forIndexPath: indexPath) as TopicCell
 
-        if (indexPath.row == self.menuItems.count) {
+        if (indexPath.row == self.topics.count) {
             // Empty cell for grey bit at bottom
         } else {
             // Get the menu item model
-            let model: MenuItemModel = self.menuItems[indexPath.row]
-        
+            let model: TopicModel = self.topics[indexPath.row]
+            
             // Configure the cell...
             cell.titleLabel.text = model.title
-            cell.itemImage.image = model.image
+            cell.topicImage.image = model.image
         }
-        
+
         return cell
     }
-    
+
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if indexPath.row == self.menuItems.count {
+        if indexPath.row == self.topics.count {
             return 5
         } else {
             return 90
         }
     }
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
