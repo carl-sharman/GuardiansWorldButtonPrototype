@@ -29,6 +29,7 @@
 		5CD97D0F1A925D0200E1E880 /* TopicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD97D0E1A925D0200E1E880 /* TopicCell.swift */; };
 		5CD97D111A925E9900E1E880 /* TopicTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD97D101A925E9900E1E880 /* TopicTableTableViewController.swift */; };
 		5CD97D131A925ED600E1E880 /* TopicModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD97D121A925ED600E1E880 /* TopicModel.swift */; };
+		5CD97D151A935B1700E1E880 /* TopicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD97D141A935B1700E1E880 /* TopicViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		5CD97D0E1A925D0200E1E880 /* TopicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicCell.swift; sourceTree = "<group>"; };
 		5CD97D101A925E9900E1E880 /* TopicTableTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicTableTableViewController.swift; sourceTree = "<group>"; };
 		5CD97D121A925ED600E1E880 /* TopicModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicModel.swift; sourceTree = "<group>"; };
+		5CD97D141A935B1700E1E880 /* TopicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				5CD97D121A925ED600E1E880 /* TopicModel.swift */,
 				176E1CF21A8E414900C3E4FD /* MenuTableViewController.swift */,
 				5CD97D101A925E9900E1E880 /* TopicTableTableViewController.swift */,
+				5CD97D141A935B1700E1E880 /* TopicViewController.swift */,
 				176E1CD61A8E246900C3E4FD /* Main.storyboard */,
 				176E1CD91A8E246900C3E4FD /* Images.xcassets */,
 				176E1CDB1A8E246900C3E4FD /* LaunchScreen.xib */,
@@ -286,6 +289,7 @@
 				176E1CF51A8E458100C3E4FD /* MenuItemCell.swift in Sources */,
 				176E1CF31A8E414900C3E4FD /* MenuTableViewController.swift in Sources */,
 				176E1CF91A8E4E7B00C3E4FD /* MenuItemModel.swift in Sources */,
+				5CD97D151A935B1700E1E880 /* TopicViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
