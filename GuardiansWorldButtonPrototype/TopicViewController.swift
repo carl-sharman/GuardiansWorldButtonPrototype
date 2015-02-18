@@ -8,40 +8,64 @@
 
 import UIKit
 
-class TopicViewController: UIViewController, UITextViewDelegate {
+class TopicViewController: UIViewController, UITextViewDelegate, UIScrollViewDelegate {
 
     @IBOutlet weak var topicScrollView: UIScrollView!
-    @IBOutlet weak var topicTextView: UITextView!
+//    @IBOutlet weak var topicTextView: UITextView!
+    @IBOutlet weak var topicLabel: UILabel!
+    @IBOutlet weak var mainImage: UIImageView!
+    
+    @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.topicLabel.preferredMaxLayoutWidth = self.view.frame.width - 10
 
         // Do any additional setup after loading the view.
-        self.sizeTextViewToContent(self.topicTextView)
+        //self.sizeTextViewToContent(self.topicTextView)
         
-        self.topicTextView.frame.size = CGSizeMake(300, 900)
-        self.topicTextView.frame = CGRectMake(0, 0, 300, 900)
+//        self.topicTextView.frame.size = CGSizeMake(300, 900)
+//        self.topicTextView.frame = CGRectMake(0, 0, 300, 900)
         
         //self.topicScrollView.contentSize = CGSizeMake(self.view.frame.width, self.topicTextView.frame.height + self.topicTextView.frame.origin.y)
         self.topicScrollView.contentSize = CGSizeMake(self.view.frame.width, 4000)
-        self.topicTextView.delegate = self
+//        self.topicTextView.delegate = self
+        
+        self.topicScrollView.delegate = self
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+    // scrollView
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        var yOffset = self.topicScrollView.contentOffset.y
+        //self.imageTopConstraint.constant--
+        self.imageTopConstraint.constant = -(yOffset / 6)
+        if self.imageTopConstraint.constant > 0 {
+            self.imageTopConstraint.constant = 0
+        }
+    }
+    
+    // textView
+    
     func textViewDidChange(textView: UITextView) {
         self.sizeTextViewToContent(textView)
     }
     
+    // Helpers
+    
     func sizeTextViewToContent(textView: UITextView) {
-        var fixedWidth: CGFloat = self.topicTextView.frame.size.width
-        var newSize: CGSize = self.topicTextView.sizeThatFits(CGSizeMake(fixedWidth, CGFloat(MAXFLOAT)))
-        var newFrame = self.topicTextView.frame
+        var fixedWidth: CGFloat = textView.frame.size.width
+        var newSize: CGSize = textView.sizeThatFits(CGSizeMake(fixedWidth, CGFloat(MAXFLOAT)))
+        var newFrame = textView.frame
         newFrame.size = CGSizeMake(CGFloat(fmaxf(Float(newSize.width), Float(fixedWidth))), newSize.height)
-        self.topicTextView.frame = newFrame
+        textView.frame = newFrame
     }
 
     /*
