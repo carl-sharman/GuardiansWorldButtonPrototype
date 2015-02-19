@@ -27,12 +27,12 @@ class TopicTableTableViewController: UITableViewController {
 //        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "Fractions")!, hasSubTopics: false))
 //        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "Measurement")!, hasSubTopics: false))
 //        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "Geometry")!, hasSubTopics: true))
-        self.topics.append(TopicModel(id: 1, title: "Number and place value", image: UIImage(named: "eight.png")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 2, title: "+ and -", image: UIImage(named: "eight.png")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 3, title: "x and /", image: UIImage(named: "eight.png")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "eight.png")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "eight.png")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "eight.png")!, hasSubTopics: true))
+        self.topics.append(TopicModel(id: 1, title: "Number and place value", image: UIImage(named: "Dogs1.jpg")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 2, title: "+ and -", image: UIImage(named: "Dogs2.jpg")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 3, title: "x and /", image: UIImage(named: "Dogs3.jpg")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "Dogs4.jpg")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "Dogs5.jpg")!, hasSubTopics: false))
+        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "Dogs6.jpg")!, hasSubTopics: true))
     }
 
     override func didReceiveMemoryWarning() {

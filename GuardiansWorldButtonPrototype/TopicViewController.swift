@@ -17,11 +17,13 @@ class TopicViewController: UIViewController, UITextViewDelegate, UIScrollViewDel
     
     @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
     
+    let leftRightMargin: Int = 10
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.topicLabel.preferredMaxLayoutWidth = self.view.frame.width - 10
-
+        self.topicLabel.preferredMaxLayoutWidth = self.view.frame.width - CGFloat(self.leftRightMargin * 2)
+	
         // Do any additional setup after loading the view.
         //self.sizeTextViewToContent(self.topicTextView)
         
@@ -29,9 +31,9 @@ class TopicViewController: UIViewController, UITextViewDelegate, UIScrollViewDel
 //        self.topicTextView.frame = CGRectMake(0, 0, 300, 900)
         
         //self.topicScrollView.contentSize = CGSizeMake(self.view.frame.width, self.topicTextView.frame.height + self.topicTextView.frame.origin.y)
-        self.topicScrollView.contentSize = CGSizeMake(self.view.frame.width, 4000)
-//        self.topicTextView.delegate = self
-        
+        //self.topicScrollView.contentSize = CGSizeMake(self.view.frame.width, 4000)
+
+        //        self.topicTextView.delegate = self
         self.topicScrollView.delegate = self
     }
 
