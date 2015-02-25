@@ -12,6 +12,7 @@ class MenuItemCell: UITableViewCell {
     
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var topicTableView: UITableView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

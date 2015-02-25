@@ -12,6 +12,7 @@ import UIKit
 class MenuItemModel {
     var title: String = ""
     var image: UIImage? = nil
+    var isSelected: Bool = false
     
     init(title: String, image: UIImage) {
         self.title = title
