@@ -123,11 +123,16 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
         let model: MenuItemModel = self.menuItems[indexPath.row]
 
         if model.isSelected {
-            return 300
+
+            
+            //return 90 + (6 * 90)
+            //return UITableViewAutomaticDimension
+            return 400 + 90
         } else {
             return 90
         }
     }
+    
 
 /*
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -152,5 +157,15 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
         // Pass the selected object to the new view controller.
     }
     */
+    
+    // Helpers
+    
+    func sizeViewToContent(view: UIView) {
+        var fixedWidth: CGFloat = view.frame.size.width
+        var newSize: CGSize = view.sizeThatFits(CGSizeMake(fixedWidth, CGFloat(MAXFLOAT)))
+        var newFrame = view.frame
+        newFrame.size = CGSizeMake(CGFloat(fmaxf(Float(newSize.width), Float(fixedWidth))), newSize.height)
+        view.frame = newFrame
+    }
 
 }

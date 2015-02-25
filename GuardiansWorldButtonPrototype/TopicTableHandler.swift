@@ -32,7 +32,7 @@ class TopicTableHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // Return the number of rows in the section.
-        return self.topics.count + 1
+        return self.topics.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

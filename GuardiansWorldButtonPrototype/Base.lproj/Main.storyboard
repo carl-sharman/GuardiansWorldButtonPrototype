@@ -384,7 +384,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuItemCell2" rowHeight="300" id="LOc-Cz-1YK" customClass="MenuItemCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
+                                    <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuItemCell2" rowHeight="400" id="LOc-Cz-1YK" customClass="MenuItemCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LOc-Cz-1YK" id="ED7-Gw-at1">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -405,7 +405,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-dJ-kCz">
-                                                    <rect key="frame" x="0.0" y="89" width="600" height="211"/>
+                                                    <rect key="frame" x="0.0" y="89" width="600" height="400"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <prototypes>
                                                         <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="topicCell" rowHeight="90" id="UNo-Xs-2R3" customClass="TopicCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
@@ -433,6 +433,7 @@
                                                             <connections>
                                                                 <outlet property="titleLabel" destination="TNd-m4-Tlc" id="zEr-gO-wQc"/>
                                                                 <outlet property="topicImage" destination="ebT-Sq-EnK" id="Rj9-fD-N3W"/>
+                                                                <segue destination="7hh-8p-fd5" kind="show" id="xWd-aG-E2j"/>
                                                             </connections>
                                                         </tableViewCell>
                                                     </prototypes>
@@ -575,7 +576,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iM1-E7-PcG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4975" y="459"/>
+            <point key="canvasLocation" x="4998" y="1410"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Iu8-v8-2o5">
@@ -602,6 +603,7 @@
         <image name="eight.png" width="411" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="xWd-aG-E2j"/>
         <segue reference="nmo-47-pZt"/>
     </inferredMetricsTieBreakers>
 </document>
