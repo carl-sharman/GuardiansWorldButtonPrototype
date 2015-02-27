@@ -380,7 +380,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="481-jc-IMW">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="481-jc-IMW">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -404,23 +404,23 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </view>
-                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-dJ-kCz">
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aW9-dJ-kCz">
                                                     <rect key="frame" x="0.0" y="89" width="600" height="400"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <prototypes>
-                                                        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="topicCell" rowHeight="90" id="UNo-Xs-2R3" customClass="TopicCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
+                                                        <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="topicCell" rowHeight="60" id="UNo-Xs-2R3" customClass="TopicCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UNo-Xs-2R3" id="CjO-V7-IJo">
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <view autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpl-Jf-WLQ">
-                                                                        <rect key="frame" x="5" y="2" width="590" height="85"/>
+                                                                        <rect key="frame" x="5" y="4" width="590" height="52"/>
                                                                         <subviews>
-                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dogs1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ebT-Sq-EnK">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="173" height="85"/>
+                                                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dogs1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ebT-Sq-EnK">
+                                                                                <rect key="frame" x="0.0" y="-4" width="71" height="56"/>
                                                                             </imageView>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNd-m4-Tlc">
-                                                                                <rect key="frame" x="181" y="8" width="401" height="69"/>
+                                                                                <rect key="frame" x="85" y="-8" width="505" height="69"/>
                                                                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="21"/>
                                                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                                                 <nil key="highlightedColor"/>
@@ -532,6 +532,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="U9Q-Hl-EdP" firstAttribute="top" secondItem="481-jc-IMW" secondAttribute="bottom" id="Bth-00-Snx"/>
+                            <constraint firstItem="481-jc-IMW" firstAttribute="top" secondItem="J0a-EU-zL4" secondAttribute="bottom" constant="-64" id="l11-YT-A2W"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="481-jc-IMW" secondAttribute="trailing" constant="-16" id="nyY-p0-zjg"/>
+                            <constraint firstItem="481-jc-IMW" firstAttribute="leading" secondItem="uUq-p7-NR2" secondAttribute="leadingMargin" constant="-16" id="rVL-Tp-ebY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FGc-iP-c43"/>
                     <connections>
@@ -540,7 +546,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ep7-1M-2tj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630" y="1562"/>
+            <point key="canvasLocation" x="2630" y="1560"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Q5j-le-D45">

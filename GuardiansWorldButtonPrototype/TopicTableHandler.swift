@@ -11,7 +11,15 @@ import UIKit
 
 class TopicTableHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
     
-    var topics: [TopicModel] = []
+    private var topics: [TopicModel] = []
+    
+    internal class var cellHeight: CGFloat {
+        get { return 60 }
+    }
+    
+    internal var topicCount: Int {
+        get { return self.topics.count }
+    }
 
     override init() {
         super.init()
@@ -56,7 +64,7 @@ class TopicTableHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
         if indexPath.row == self.topics.count {
             return 5
         } else {
-            return 90
+            return TopicTableHandler.cellHeight
         }
     }
     

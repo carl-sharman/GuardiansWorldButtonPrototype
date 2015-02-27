@@ -51,18 +51,14 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
         
         let cell: MenuItemCell = tableView.dequeueReusableCellWithIdentifier("menuItemCell2", forIndexPath: indexPath) as MenuItemCell
         
-        if (indexPath.row == self.menuItems.count + 1) {
-            // Empty cell for grey bit at bottom
-        } else {
-            // Get the menu item model
-            let model: MenuItemModel = self.menuItems[indexPath.row]
+        // Get the menu item model
+        let model: MenuItemModel = self.menuItems[indexPath.row]
             
-            // Configure the cell...
-            cell.titleLabel.text = model.title
-            cell.itemImage.image = model.image            
-            cell.topicTableView.dataSource = topicTableHandler
-            cell.topicTableView.delegate = topicTableHandler
-        }
+        // Configure the cell...
+        cell.titleLabel.text = model.title
+        cell.itemImage.image = model.image
+        cell.topicTableView.dataSource = topicTableHandler
+        cell.topicTableView.delegate = topicTableHandler
         
         return cell
     }
@@ -77,6 +73,10 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
         // Update with animations
         tableView.beginUpdates()
         tableView.endUpdates()
+        
+        var cellFrame: CGRect = tableView.cellForRowAtIndexPath(indexPath)!.frame
+        
+        tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         
         /*
         // Change cell size
@@ -127,7 +127,10 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
             
             //return 90 + (6 * 90)
             //return UITableViewAutomaticDimension
-            return 400 + 90
+            let totalCellHeight: CGFloat = TopicTableHandler.cellHeight * CGFloat(self.topicTableHandler.topicCount)
+            var height: CGFloat = totalCellHeight + 90  // topic table height + year group cell height
+            
+            return height;
         } else {
             return 90
         }
