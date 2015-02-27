@@ -36,6 +36,16 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var topicViewController: TopicViewController = segue.destinationViewController.topViewController as TopicViewController
+        var selectedTopicCell: TopicCell = sender as TopicCell
+        
+        topicViewController.topicId = selectedTopicCell.topicId
+
+        // Rubbish temporary code
+        topicViewController.topicTitle = TopicModel.getAllTopics().filter { $0.id == selectedTopicCell.topicId }[0].title
+    }
 
     // UITableViewDataSource
 
@@ -74,8 +84,7 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
         tableView.beginUpdates()
         tableView.endUpdates()
         
-        var cellFrame: CGRect = tableView.cellForRowAtIndexPath(indexPath)!.frame
-        
+        // Ensure the selected row is fully visible (i.e. if the expanded cell is partially off screen, this will move the scroll view so the entire cell is visible
         tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
         
         /*
@@ -122,17 +131,16 @@ class SlidingButtonMenuViewController: UIViewController, UITableViewDataSource, 
         // Get the menu item model
         let model: MenuItemModel = self.menuItems[indexPath.row]
 
+        let yearGroupTitleAreaHeight: CGFloat = 90
+        
         if model.isSelected {
-
             
-            //return 90 + (6 * 90)
-            //return UITableViewAutomaticDimension
-            let totalCellHeight: CGFloat = TopicTableHandler.cellHeight * CGFloat(self.topicTableHandler.topicCount)
-            var height: CGFloat = totalCellHeight + 90  // topic table height + year group cell height
+            let totalTopicCellHeight: CGFloat = TopicTableHandler.cellHeight * CGFloat(self.topicTableHandler.topicCount)
+            var height: CGFloat = totalTopicCellHeight + yearGroupTitleAreaHeight  // topic table height + year group cell height
             
             return height;
         } else {
-            return 90
+            return yearGroupTitleAreaHeight
         }
     }
     

@@ -330,12 +330,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="An8-Y9-aZb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5787" y="459"/>
+            <point key="canvasLocation" x="5845" y="1444"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="1jp-9e-jxb">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wqy-bq-yzI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wqy-bq-yzI" customClass="MainNavigationController" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="m2a-3F-TKB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -368,7 +368,7 @@
             </objects>
             <point key="canvasLocation" x="1818" y="833"/>
         </scene>
-        <!--Sliding Button Menu View Controller-->
+        <!--Guardian's World-->
         <scene sceneID="Jf0-6T-NTF">
             <objects>
                 <viewController id="5sA-Us-8jd" customClass="SlidingButtonMenuViewController" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target" sceneMemberID="viewController">
@@ -539,7 +539,7 @@
                             <constraint firstItem="481-jc-IMW" firstAttribute="leading" secondItem="uUq-p7-NR2" secondAttribute="leadingMargin" constant="-16" id="rVL-Tp-ebY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FGc-iP-c43"/>
+                    <navigationItem key="navigationItem" title="Guardian's World" id="FGc-iP-c43"/>
                     <connections>
                         <outlet property="menuTableView2" destination="481-jc-IMW" id="UlL-JW-2iE"/>
                     </connections>
@@ -609,7 +609,7 @@
         <image name="eight.png" width="411" height="640"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="xWd-aG-E2j"/>
         <segue reference="nmo-47-pZt"/>
+        <segue reference="1CV-6Y-s8h"/>
     </inferredMetricsTieBreakers>
 </document>

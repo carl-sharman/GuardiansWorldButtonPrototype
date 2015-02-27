@@ -12,10 +12,41 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    // United Learning logo colours
+    
+    // "The best in everyone" colour
+    internal class var unitedLearningLightBlue: UIColor {
+        get { return UIColor(red: 68.0/255.0, green: 120.0/255.0, blue: 185.0/255.0, alpha: 1.0) }
+    }
+    
+    // "United Learning" colour
+    internal class var unitedLearningDarkBlue: UIColor {
+        get { return UIColor(red: 32.0/255.0, green: 36.0/255.0, blue: 104.0/255.0, alpha: 1.0) }
+    }
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+        
         // Override point for customization after application launch.
+        
+        // UI Appearance customization
+        //UINavigationBar.appearance().barTintColor = UIColor(red: 234.0/255.0, green: 46.0/255.0, blue: 73.0/255.0, alpha: 1.0)  // Background colour of nav bar
+//        UINavigationBar.appearance().barTintColor = AppDelegate.unitedLearningDarkBlue  // Background colour of nav bar
+        UINavigationBar.appearance().barTintColor = AppDelegate.unitedLearningLightBlue  // Background colour of nav bar
+        
+        UINavigationBar.appearance().barStyle = UIBarStyle.Black  // Makes the phone status bar text and battery icon white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor()]
+        UINavigationBar.appearance().tintColor = UIColor.whiteColor()
+        UINavigationBar.appearance().translucent = true;
+        
+        //UINavigationBar.appearance().backgroundColor = UIColor.blueColor()
+        //UINavigationBar.appearance().alpha = 0.0
+
+        UIBarButtonItem.appearance().tintColor = UIColor.whiteColor()
+        UIBarButtonItem.appearance().setTitleTextAttributes([NSForegroundColorAttributeName: UIColor.whiteColor()], forState: UIControlState.Normal)
+        
+        UITabBar.appearance().backgroundColor = UIColor.blueColor();
+        
         return true
     }
 

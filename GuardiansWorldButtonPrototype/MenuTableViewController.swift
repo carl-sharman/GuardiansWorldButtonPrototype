@@ -38,6 +38,18 @@ class MenuTableViewController: UITableViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        //var topicViewController: TopicViewController = segue.destinationViewController.topViewController as TopicViewController
+//        var selectedTopicCell: TopicCell = sender as TopicCell
+        
+  //      topicViewController.topicId = selectedTopicCell.topicId
+        var topicTableViewController: TopicTableTableViewController = segue.destinationViewController.topViewController as TopicTableTableViewController
+        var selectedYearCell: MenuItemCell = sender as MenuItemCell
+        //topicTableViewController.yearNo = self.menuItems.filter { $0.title == selectedYearCell.titleLabel.text }[0].yearNo
+        //topicTableViewController.yearNo = self.menuItems. self.menuItems.filter { $0.title == selectedYearCell.titleLabel.text }[0]
+        topicTableViewController.yearNo = self.menuItems.indexOf { $0.title == selectedYearCell.titleLabel.text }! + 1
+    }
 
     // MARK: - Table view data source
 

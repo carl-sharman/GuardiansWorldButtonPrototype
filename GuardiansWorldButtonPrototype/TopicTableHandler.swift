@@ -23,12 +23,8 @@ class TopicTableHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
 
     override init() {
         super.init()
-        self.topics.append(TopicModel(id: 1, title: "Number and place value", image: UIImage(named: "Dogs1.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 2, title: "+ and -", image: UIImage(named: "Dogs2.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 3, title: "x and /", image: UIImage(named: "Dogs3.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "Dogs4.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "Dogs5.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "Dogs6.jpg")!, hasSubTopics: true))
+        
+        self.topics = TopicModel.getAllTopics()
     }
     
     // MARK: - Table view data source
@@ -52,7 +48,8 @@ class TopicTableHandler: NSObject, UITableViewDataSource, UITableViewDelegate {
             // Get the menu item model
             let model: TopicModel = self.topics[indexPath.row]
             
-            // Configure the cell...
+            // Configure the cell
+            cell.topicId = model.id
             cell.titleLabel.text = model.title
             cell.topicImage.image = model.image
         }

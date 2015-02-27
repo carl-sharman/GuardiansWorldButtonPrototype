@@ -11,6 +11,7 @@ import UIKit
 class TopicTableTableViewController: UITableViewController {
 
     var topics: [TopicModel] = []
+    var yearNo: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +21,9 @@ class TopicTableTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-//        self.topics.append(TopicModel(id: 1, title: "Number and place value", image: UIImage(named: "NumberAndPlaceValue")!, hasSubTopics: false))
-//        self.topics.append(TopicModel(id: 2, title: "+ and -", image: UIImage(named: "PlusAndMinus")!, hasSubTopics: false))
-//        self.topics.append(TopicModel(id: 3, title: "x and /", image: UIImage(named: "TimesAndDivision")!, hasSubTopics: false))
-//        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "Fractions")!, hasSubTopics: false))
-//        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "Measurement")!, hasSubTopics: false))
-//        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "Geometry")!, hasSubTopics: true))
-        self.topics.append(TopicModel(id: 1, title: "Number and place value", image: UIImage(named: "Dogs1.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 2, title: "+ and -", image: UIImage(named: "Dogs2.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 3, title: "x and /", image: UIImage(named: "Dogs3.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "Dogs4.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "Dogs5.jpg")!, hasSubTopics: false))
-        self.topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "Dogs6.jpg")!, hasSubTopics: true))
+
+        self.topics = TopicModel.getAllTopics()
+        self.navigationItem.title = "Year \(self.yearNo)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +31,14 @@ class TopicTableTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        var topicViewController: TopicViewController = segue.destinationViewController.topViewController as TopicViewController
+        var selectedTopicCell: TopicCell = sender as TopicCell
+        
+        topicViewController.topicId = selectedTopicCell.topicId        
+        topicViewController.topicTitle = self.topics.filter { $0.id == selectedTopicCell.topicId }[0].title
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -61,7 +60,8 @@ class TopicTableTableViewController: UITableViewController {
             // Get the menu item model
             let model: TopicModel = self.topics[indexPath.row]
             
-            // Configure the cell...
+            // Configure the cell
+            cell.topicId = model.id
             cell.titleLabel.text = model.title
             cell.topicImage.image = model.image
         }

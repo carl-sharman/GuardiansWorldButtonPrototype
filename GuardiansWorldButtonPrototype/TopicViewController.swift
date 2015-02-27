@@ -17,7 +17,9 @@ class TopicViewController: UIViewController, UITextViewDelegate, UIScrollViewDel
     
     @IBOutlet weak var imageTopConstraint: NSLayoutConstraint!
     
-    let leftRightMargin: Int = 10
+    private let leftRightMargin: Int = 10
+    internal var topicId: Int = 0
+    internal var topicTitle: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,24 @@ class TopicViewController: UIViewController, UITextViewDelegate, UIScrollViewDel
 
         //        self.topicTextView.delegate = self
         self.topicScrollView.delegate = self
+        
+        self.navigationItem.title = self.topicTitle
+        switch(self.topicId) {
+        case 1:
+            self.mainImage.image = UIImage(named: "Dogs1.jpg")
+        case 2:
+            self.mainImage.image = UIImage(named: "Dogs2.jpg")
+        case 3:
+            self.mainImage.image = UIImage(named: "Dogs3.jpg")
+        case 4:
+            self.mainImage.image = UIImage(named: "Dogs4.jpg")
+        case 5:
+            self.mainImage.image = UIImage(named: "Dogs5.jpg")
+        case 6:
+            self.mainImage.image = UIImage(named: "Dogs6.jpg")
+        default:
+            NSException(name: "Unhandled topic", reason: "Topic id \(self.topicId) not handled", userInfo: nil)
+        }
     }
 
     

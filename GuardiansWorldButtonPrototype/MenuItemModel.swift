@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class MenuItemModel {
+class MenuItemModel : NSObject {
     var title: String = ""
     var image: UIImage? = nil
     var isSelected: Bool = false
