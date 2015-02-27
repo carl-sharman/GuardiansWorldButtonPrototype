@@ -138,12 +138,12 @@
         <scene sceneID="K1R-h7-NDa">
             <objects>
                 <tableViewController id="0CI-pn-ttO" customClass="MenuTableViewController" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="22" sectionFooterHeight="22" id="fyj-cE-kN3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fyj-cE-kN3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuItemCell" rowHeight="90" id="Dsa-x4-U8h" customClass="MenuItemCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
+                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuHeaderCell" rowHeight="90" id="Dsa-x4-U8h" customClass="MenuItemCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="Dsa-x4-U8h" id="eQS-dU-aNd">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -151,19 +151,25 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ldg-Wa-ocg">
                                             <rect key="frame" x="5" y="5" width="590" height="85"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aB-vs-73K">
-                                                    <rect key="frame" x="107" y="8" width="483" height="69"/>
-                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="38"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardian's World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aB-vs-73K">
+                                                    <rect key="frame" x="185" y="8" width="220" height="69"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="29"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eight.png" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-WC-6gN">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ks1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-WC-6gN">
                                                     <rect key="frame" x="8" y="15" width="63" height="56"/>
                                                 </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ks1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5u0-zb-2VW">
+                                                    <rect key="frame" x="513" y="15" width="63" height="56"/>
+                                                </imageView>
                                             </subviews>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="3aB-vs-73K" secondAttribute="centerX" id="0aw-5y-m3u"/>
+                                                <constraint firstAttribute="bottom" secondItem="3aB-vs-73K" secondAttribute="bottom" constant="8" id="9qf-Zf-pxt"/>
                                                 <constraint firstAttribute="height" constant="85" id="MWx-zD-hyN"/>
+                                                <constraint firstItem="3aB-vs-73K" firstAttribute="top" secondItem="Ldg-Wa-ocg" secondAttribute="top" constant="8" id="zQl-gI-a8P"/>
                                             </constraints>
                                         </view>
                                     </subviews>
@@ -178,6 +184,42 @@
                                     <outlet property="itemImage" destination="1gV-WC-6gN" id="8xw-c9-wt0"/>
                                     <outlet property="titleLabel" destination="3aB-vs-73K" id="FVH-hQ-aaP"/>
                                     <segue destination="7kt-UB-TyZ" kind="show" id="nmo-47-pZt"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuItemCell" rowHeight="90" id="IUc-ku-upL" customClass="MenuItemCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="IUc-ku-upL" id="4yo-Jz-mIO">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6u0-Sy-TWV">
+                                            <rect key="frame" x="5" y="5" width="590" height="85"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2FY-X1-MoC">
+                                                    <rect key="frame" x="107" y="8" width="483" height="69"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="38"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="eight.png" translatesAutoresizingMaskIntoConstraints="NO" id="QBU-VS-Nhk">
+                                                    <rect key="frame" x="8" y="15" width="63" height="56"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="85" id="hcI-Y7-DhV"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="6u0-Sy-TWV" firstAttribute="top" secondItem="4yo-Jz-mIO" secondAttribute="topMargin" constant="-3" id="Rj8-x1-fLi"/>
+                                        <constraint firstItem="6u0-Sy-TWV" firstAttribute="leading" secondItem="4yo-Jz-mIO" secondAttribute="leadingMargin" constant="-3" id="VkW-OV-Zbp"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="6u0-Sy-TWV" secondAttribute="trailing" constant="-3" id="fFi-Ep-M4f"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.91777997489999996" green="0.9117287838" blue="0.94312263259999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="itemImage" destination="QBU-VS-Nhk" id="LEA-LC-hsm"/>
+                                    <outlet property="titleLabel" destination="2FY-X1-MoC" id="ULO-XD-8o2"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -607,6 +649,7 @@
         <image name="Dogs1.jpg" width="259" height="194"/>
         <image name="Dogs2.jpg" width="269" height="188"/>
         <image name="eight.png" width="411" height="640"/>
+        <image name="ks1.jpg" width="188" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="nmo-47-pZt"/>

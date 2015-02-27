@@ -62,6 +62,14 @@ class MenuTableViewController: UITableViewController {
         // Return the number of rows in the section.
         return self.menuItems.count + 1
     }
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell: MenuHeaderCell = tableView.dequeueReusableCellWithIdentifier("menuHeaderCell") as MenuHeaderCell
+        headerCell.backgroundColor = AppDelegate.unitedLearningLightBlue
+        
+        
+        return headerCell
+    }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell: MenuItemCell = tableView.dequeueReusableCellWithIdentifier("menuItemCell", forIndexPath: indexPath) as MenuItemCell
@@ -78,6 +86,10 @@ class MenuTableViewController: UITableViewController {
         }
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 100
     }
     
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
