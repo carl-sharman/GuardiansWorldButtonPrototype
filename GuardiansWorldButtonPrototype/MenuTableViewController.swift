@@ -65,9 +65,8 @@ class MenuTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell: MenuHeaderCell = tableView.dequeueReusableCellWithIdentifier("menuHeaderCell") as MenuHeaderCell
-        headerCell.backgroundColor = AppDelegate.unitedLearningLightBlue
-        
-        
+        //headerCell.backgroundColor = AppDelegate.unitedLearningLightBlue
+                
         return headerCell
     }
 

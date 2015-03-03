@@ -16,7 +16,7 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.shrinkRectangle()
+        //self.shrinkRectangle()
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -29,6 +29,7 @@ class MainMenuViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    /*
     func shrinkRectangle() {
         
         UIView.animateWithDuration(0.7, delay: 1.0, options: .CurveEaseOut, animations: {
@@ -44,6 +45,7 @@ class MainMenuViewController: UIViewController {
         })
         
     }
+*/
 
     /*
     // MARK: - Navigation

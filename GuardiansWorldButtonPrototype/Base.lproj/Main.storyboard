@@ -53,10 +53,6 @@
                                     <segue destination="xhZ-cG-TmZ" kind="show" id="dGl-57-2Sm"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NMn-aX-iat">
-                                <rect key="frame" x="37" y="225" width="186" height="326"/>
-                                <color key="backgroundColor" red="1" green="0.60653248609999999" blue="0.1426075638" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -72,9 +68,6 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Prototypes" id="MiX-3O-uql"/>
-                    <connections>
-                        <outlet property="rectangleView" destination="NMn-aX-iat" id="I6m-u5-Elp"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vtu-bq-5Xa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,12 +131,12 @@
         <scene sceneID="K1R-h7-NDa">
             <objects>
                 <tableViewController id="0CI-pn-ttO" customClass="MenuTableViewController" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fyj-cE-kN3">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="fyj-cE-kN3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuHeaderCell" rowHeight="90" id="Dsa-x4-U8h" customClass="MenuItemCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
+                            <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuHeaderCell" rowHeight="90" id="Dsa-x4-U8h" customClass="MenuHeaderCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="Dsa-x4-U8h" id="eQS-dU-aNd">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -152,23 +145,32 @@
                                             <rect key="frame" x="5" y="5" width="590" height="85"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guardian's World" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3aB-vs-73K">
-                                                    <rect key="frame" x="185" y="8" width="220" height="69"/>
-                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="29"/>
+                                                    <rect key="frame" x="208" y="8" width="175" height="69"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="23"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ks1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="1gV-WC-6gN">
                                                     <rect key="frame" x="8" y="15" width="63" height="56"/>
                                                 </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ks1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5u0-zb-2VW">
-                                                    <rect key="frame" x="513" y="15" width="63" height="56"/>
-                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A United Learning App" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFL-wU-IUi">
+                                                    <rect key="frame" x="455" y="69" width="127" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="127" id="SNI-Qp-NUv"/>
+                                                        <constraint firstAttribute="height" constant="21" id="pXP-Lv-jK6"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="3aB-vs-73K" secondAttribute="centerX" id="0aw-5y-m3u"/>
                                                 <constraint firstAttribute="bottom" secondItem="3aB-vs-73K" secondAttribute="bottom" constant="8" id="9qf-Zf-pxt"/>
+                                                <constraint firstAttribute="bottom" secondItem="RFL-wU-IUi" secondAttribute="bottom" constant="-5" id="Idn-Rn-bk0"/>
                                                 <constraint firstAttribute="height" constant="85" id="MWx-zD-hyN"/>
+                                                <constraint firstAttribute="trailing" secondItem="RFL-wU-IUi" secondAttribute="trailing" constant="8" id="tfX-i0-qAP"/>
                                                 <constraint firstItem="3aB-vs-73K" firstAttribute="top" secondItem="Ldg-Wa-ocg" secondAttribute="top" constant="8" id="zQl-gI-a8P"/>
                                             </constraints>
                                         </view>
@@ -180,11 +182,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.91777997494512575" green="0.9117287838200363" blue="0.94312263257575746" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <outlet property="itemImage" destination="1gV-WC-6gN" id="8xw-c9-wt0"/>
-                                    <outlet property="titleLabel" destination="3aB-vs-73K" id="FVH-hQ-aaP"/>
-                                    <segue destination="7kt-UB-TyZ" kind="show" id="nmo-47-pZt"/>
-                                </connections>
                             </tableViewCell>
                             <tableViewCell autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="menuItemCell" rowHeight="90" id="IUc-ku-upL" customClass="MenuItemCell" customModule="GuardiansWorldButtonPrototype" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -220,6 +217,7 @@
                                 <connections>
                                     <outlet property="itemImage" destination="QBU-VS-Nhk" id="LEA-LC-hsm"/>
                                     <outlet property="titleLabel" destination="2FY-X1-MoC" id="ULO-XD-8o2"/>
+                                    <segue destination="7kt-UB-TyZ" kind="show" id="AKu-al-fJi"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -652,7 +650,7 @@
         <image name="ks1.jpg" width="188" height="268"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="nmo-47-pZt"/>
+        <segue reference="AKu-al-fJi"/>
         <segue reference="1CV-6Y-s8h"/>
     </inferredMetricsTieBreakers>
 </document>
