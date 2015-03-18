@@ -38,7 +38,7 @@ internal class TopicModel {
         topics.append(TopicModel(id: 4, title: "Fractions", image: UIImage(named: "Dogs4.jpg")!, hasSubTopics: false))
         topics.append(TopicModel(id: 5, title: "Measurement", image: UIImage(named: "Dogs5.jpg")!, hasSubTopics: false))
         topics.append(TopicModel(id: 6, title: "Geometry", image: UIImage(named: "Dogs6.jpg")!, hasSubTopics: true))
-
+	
         return topics
     }
 }
